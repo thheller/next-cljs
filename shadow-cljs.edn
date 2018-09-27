@@ -1,0 +1,14 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "0.8.1"]]
+
+ :builds
+ {:site {:target :npm-module
+         :output-dir "site/src/cljs"
+         :build-hooks [(shadow.next-js/create-pages)]
+         :entries [demo.site]}}}
