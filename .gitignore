@@ -18,3 +18,9 @@ pom.xml.asc
 
 .hgignore
 .hg/
+
+
+.next
+site/src/cljs/
+site/pages/
+

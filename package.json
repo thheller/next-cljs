@@ -2,11 +2,19 @@
   "name": "next-cljs",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "cljs-watch": "npx shadow-cljs watch site", 
+    "next-watch": "node server.js",
+    "watch": "npx concurrently \"npm:cljs-watch\" \"npm:next-watch\""
+  },
   "devDependencies": {
     "shadow-cljs": "2.6.10"
   },
   "dependencies": {
+    "concurrently": "^4.0.1",
     "create-react-class": "^15.6.3",
+    "express": "^4.16.4",
+    "next": "^7.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   }
