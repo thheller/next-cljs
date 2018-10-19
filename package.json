@@ -1,17 +1,21 @@
 {
   "name": "next-cljs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "cljs-watch": "npx shadow-cljs watch site", 
     "next-watch": "node server.js",
-    "watch": "npx concurrently \"npm:cljs-watch\" \"npm:next-watch\""
+    "cljs-build":"npx shadow-cljs release site",
+    "next-build":"npx next build site",
+    "watch": "npx concurrently -k \"npm:cljs-watch\" \"npm:next-watch\"",
+    "build": "npm run cljs-build && npm run next-build",
+    "start": "env NODE_ENV=production node server.js"
   },
   "devDependencies": {
-    "shadow-cljs": "2.6.10"
+    "shadow-cljs": "2.6.10",
+    "concurrently": "^4.0.1"
   },
   "dependencies": {
-    "concurrently": "^4.0.1",
     "create-react-class": "^15.6.3",
     "express": "^4.16.4",
     "next": "^7.0.0",
