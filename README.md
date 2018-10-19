@@ -6,19 +6,7 @@ Minimal example showing how shadow-cljs could be used together with next.js to c
 
 ```
 npm install
-npx shadow-cljs watch site
-# or
-npx shadow-cljs release site
-```
-
-## Run next separately
-
-```
-cd site
-npm install
-npx next
-# or
-npx next build && npx next start
+npx run watch
 ```
 
 ## When done open in browser
