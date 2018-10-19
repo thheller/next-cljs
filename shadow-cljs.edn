@@ -9,6 +9,6 @@
 
  :builds
  {:site {:target :npm-module
-         :output-dir "site/src/cljs"
+         :output-dir "build/src/cljs"
          :build-hooks [(shadow.next-js/create-pages)]
          :entries [demo.site]}}}

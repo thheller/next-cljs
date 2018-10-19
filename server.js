@@ -3,7 +3,7 @@ const express = require('express')
 const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const port = parseInt(process.env.PORT, 10) || 3000
-const app = next({ dir: './site', dev })
+const app = next({ dev })
 const handle = app.getRequestHandler()
 
 app.prepare().then(_=>  {

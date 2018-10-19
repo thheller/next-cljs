@@ -27,10 +27,10 @@
           ;; Y U NO DATA THIS!
           content
           (str
-            "\nexport {" page-var " as default} from \"../src/cljs/" page-ns ".js\";")
+            "\nexport {" page-var " as default} from \"../build/src/cljs/" page-ns ".js\";")
 
           out-dir
-          (io/file "site" "pages")
+          (io/file "pages")
 
           out-file
           (io/file out-dir (str page ".js"))]
